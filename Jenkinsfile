@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage ('Checkout') {
 			steps {
-				git 'here your repo url'
+				git 'https://github.com/carlogilmar/Spring-Boot-Toy.git'
 			}
 		}
 		stage('Build'){

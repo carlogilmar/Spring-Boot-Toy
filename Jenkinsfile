@@ -8,17 +8,17 @@ pipeline {
 		}
 		stage('Build'){
 			steps{
-				sh 'gradle clean compileJava'
+				sh 'gradle clean compileJava --no-daemon'
 			}
 		}
 		stage('Unit-test'){
 			steps {
-				sh 'gradle test'
+				sh 'gradle test --no-daemon'
 			}
 		}
 		stage('Integration-test'){
 			steps {
-				sh 'gradle integrationTest'
+				sh 'gradle integrationTest --no-daemon'
 			}
 		}
 	}

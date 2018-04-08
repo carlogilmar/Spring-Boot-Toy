@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker 'gradle:4.5-jdk8-alpine' }
+  agent any
 	stages {
 		stage ('Checkout') {
 			steps {

@@ -10,7 +10,9 @@ pipeline {
 		stage ('Checkout') {
 			steps {
 				git 'https://github.com/carlogilmar/Spring-Boot-Toy.git'
-        sh 'curl -X POST --data-urlencode "payload={\"channel\": \"#general\", \"username\": \"webhookbot\", \"text\": \"Jenkins says: Can you see me???.\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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'
+        sh """
+        curl -X POST --data-urlencode "payload={\"channel\": \"#general\", \"username\": \"webhookbot\", \"text\": \"Jenkins says: Can you see me???.\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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'
+        """
 			}
 		}
     stage('Build'){
